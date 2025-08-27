@@ -21,13 +21,7 @@ export const updateContactSchema = Joi.object({
     .min(3)
     .max(20)
     .valid('work', 'home', 'personal'),
+  
+
 });
 
-// const validationResult = createContactSchema.validate(userData, {
-//     abortEarly: false,
-// });
-//     if (validationResult.error) {
-//   console.error(validationResult.error.message);
-// } else {
-//   console.log('Data is valid!');
-// };
