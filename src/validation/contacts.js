@@ -21,6 +21,7 @@ export const updateContactSchema = Joi.object({
     .min(3)
     .max(20)
     .valid('work', 'home', 'personal'),
+    photo: Joi.string(),
   
 
 });
