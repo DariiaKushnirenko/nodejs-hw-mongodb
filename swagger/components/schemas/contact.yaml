@@ -6,27 +6,32 @@ required:
   - userId
 properties:
   name:
+    description: "Contact's name"
     type: string
-    example: John Doe
+    example: "John Doe"
   phoneNumber:
+    description: "Contact's phone number"
     type: string
-    example: '+1234567890'
+    example: "+1234567890"
   email:
+    description: "Contact's email"
     type: string
-    example: johndoe@example.com
+    format: email
+    example: "johndoe@example.com"
   isFavourite:
+    description: "Whether the contact is marked as favourite"
     type: boolean
     example: false
   contactType:
+    description: "Type of contact"
     type: string
-    enum:
-      - work
-      - home
-      - personal
-    example: work
+    enum: [work, home, personal]
+    example: "work"
   userId:
+    description: "ID of the user who owns this contact"
     type: string
     example: 65e4decdd286b30065d54af9
   photo:
+    description: "Contact's photo file"
     type: string
     format: binary

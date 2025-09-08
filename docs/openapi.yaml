@@ -14,17 +14,30 @@ tags:
     description: Auth operations.
 servers:
   - url: http://localhost:3000
+    description: Local server
   - url: #посилання на задеплоєний сайт
+    description: Production server
+
 paths:
-/students:
+/contacts:
     get:
       $ref: ../swagger/paths/contacts/get.yaml
-/contacts:
     post:
       $ref: ../swagger/paths/contacts/post.yaml
-/contacts/{id}:
+/contacts/{contactId}:
     get:
-      $ref: ../swagger/paths/contacts/{id}/get.yaml
+      $ref: ../swagger/paths/contacts/{contactId}/get.yaml
+    patch:
+      $ref: ../swagger/paths/contacts/{contactId}/patch.yaml
+    delete:
+      $ref: ../swagger/paths/contacts/{contactId}/delete.yaml
+
+/auth/register:
+    $ref: ./paths/auth/register.yaml
+/auth/login:
+    $ref: ./paths/auth/login.yaml
+
+      
 components:
   securitySchemes:
     bearerAuth:
