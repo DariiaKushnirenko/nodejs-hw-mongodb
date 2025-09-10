@@ -5,13 +5,14 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  description:
-   This is a documentation for contacts app
+  description: This is a documentation for contacts app
+
 tags:
   - name: Contacts
     description: Operations about contacts.
   - name: Auth
     description: Auth operations.
+
 servers:
   - url: http://localhost:3000
     description: Local server
@@ -19,12 +20,13 @@ servers:
     description: Production server
 
 paths:
-/contacts:
+  /contacts:
     get:
       $ref: ../swagger/paths/contacts/get.yaml
     post:
       $ref: ../swagger/paths/contacts/post.yaml
-/contacts/{contactId}:
+
+  /contacts/{contactId}:
     get:
       $ref: ../swagger/paths/contacts/{contactId}/get.yaml
     patch:
@@ -32,12 +34,13 @@ paths:
     delete:
       $ref: ../swagger/paths/contacts/{contactId}/delete.yaml
 
-/auth/register:
-    $ref: ./paths/auth/register.yaml
-/auth/login:
-    $ref: ./paths/auth/login.yaml
+  # /auth/register:
+  #   get:
+  #     $ref: ../swagger/paths/auth/register.yaml
+  # /auth/login:
+  #   post:
+  #     $ref: ../swagger/paths/auth/login.yaml
 
-      
 components:
   securitySchemes:
     bearerAuth:
