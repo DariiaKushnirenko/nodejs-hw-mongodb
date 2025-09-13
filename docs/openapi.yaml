@@ -35,7 +35,7 @@ paths:
       $ref: ../swagger/paths/contacts/{contactId}/delete.yaml
 
   /auth/register:
-    get:
+    post:
       $ref: ../swagger/paths/auth/register.yaml
   /auth/login:
     post:

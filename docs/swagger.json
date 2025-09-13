@@ -482,7 +482,7 @@
       }
     },
     "/auth/register": {
-      "get": {
+      "post": {
         "tags": [
           "Auth"
         ],
